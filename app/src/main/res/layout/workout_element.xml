@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="LATERAL BROAD JUMP" />
+
+        <ImageView
+            android:id="@+id/workoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            tools:src="@drawable/lateral_broad_jump" />
+
+        <Button
+            android:id="@+id/setsIncreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/increase"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/setsLabelText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/setsLabelText" />
+
+        <Button
+            android:id="@+id/setsDecreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/decrease"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/setsLabelText"
+            app:layout_constraintEnd_toStartOf="@id/setsIncreaseButton"
+            app:layout_constraintTop_toTopOf="@id/setsLabelText" />
+
+        <Button
+            android:id="@+id/repsIncreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/increase"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/repsLabelText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/repsLabelText" />
+
+        <Button
+            android:id="@+id/repsDecreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/decrease"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/repsLabelText"
+            app:layout_constraintEnd_toStartOf="@id/repsIncreaseButton"
+            app:layout_constraintTop_toTopOf="@id/repsLabelText" />
+
+        <TextView
+            android:id="@+id/setsLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/sets"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workoutImage" />
+
+        <TextView
+            android:id="@+id/repsLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reps"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setsLabelText" />
+
+        <TextView
+            android:id="@+id/setsNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/setsLabelText"
+            app:layout_constraintStart_toEndOf="@id/setsLabelText"
+            app:layout_constraintTop_toTopOf="@id/setsLabelText"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/repsNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/repsLabelText"
+            app:layout_constraintStart_toEndOf="@id/repsLabelText"
+            app:layout_constraintTop_toTopOf="@id/repsLabelText"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/repsGuidLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repsLabelText"
+            tools:text="@string/lateral_broad_jump_reps_title" />
+
+        <TextView
+            android:id="@+id/repsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repsGuidLabelText"
+            tools:text="@string/lateral_broad_jump_reps_text" />
+
+        <TextView
+            android:id="@+id/guidLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repsText"
+            tools:text="@string/lateral_broad_jump_guid_title" />
+
+        <TextView
+            android:id="@+id/workoutStepsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidLabelText"
+            tools:text="@string/lateral_broad_jump_guid_text" />
+
+        <TextView
+            android:id="@+id/explanationLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workoutStepsText"
+            tools:text="Lateral Broad Jump – Full Explanation" />
+
+        <TextView
+            android:id="@+id/explanationText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/explanationLabelText"
+            tools:text="Get into an en garde position as you normally would, then lift your front foot off the ground and hold it in the air. By simply hovering the front foot off the ground, you force your back leg to take on additional load while it performs the exercise." />
+
+
+        <TextView
+            android:id="@+id/progressionLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/explanationText"
+            tools:text="Lateral Broad Jump – Progression" />
+
+        <TextView
+            android:id="@+id/progressionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressionLabelText"
+            tools:text="There are two ways to make this exercise more challenging. The first is carry more weight while you are performing the lunge movement. For example, you can hold light dumbbells (2-5 pounds) i" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
